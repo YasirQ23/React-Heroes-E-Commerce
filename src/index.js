@@ -1,17 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './css/index.css';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import ProviderLayer from './ProviderLayer';
+import { FirebaseAppProvider } from 'reactfire';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDZKWdDfA3w_4oHEAs_Qgfwj1ScV9m_Ogc",
+  authDomain: "react-hero-shop.firebaseapp.com",
+  projectId: "react-hero-shop",
+  storageBucket: "react-hero-shop.appspot.com",
+  messagingSenderId: "599948233740",
+  appId: "1:599948233740:web:1182c4545340c06dbef229"
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+      <BrowserRouter>
+        <ProviderLayer />
+      </BrowserRouter>
+    </FirebaseAppProvider>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

@@ -1,0 +1,27 @@
+body {
+  background-color: cadetblue;
+}
+
+#navcon{
+  padding: 0;
+  margin: 0;
+  max-width: 100vw;
+}
+
+#navcart{
+  margin-left: 40rem;
+}
+
+.card-deck {
+  max-width: 100%;
+  margin: 3rem;
+  text-align: center;
+}
+
+.btn{
+  margin: 1rem;
+}
+
+.nav-item {
+  align-items: center;
+}
